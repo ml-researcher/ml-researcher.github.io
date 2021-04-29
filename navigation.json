@@ -1,0 +1,19 @@
+{
+    "navigation":
+    [
+        {
+            "text": "Paper",
+            "target": "Paper/vx.json",
+            "navi": true,
+            "navi_index": "test.md"
+        }
+    ],
+    "actions":
+    [
+        {
+            "text": "ml-researcher",
+            "icon": "css/viki_white.svg",
+            "target": "https://github.com/ml-researcher"
+        }
+    ]
+}
