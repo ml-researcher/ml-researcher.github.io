@@ -127,7 +127,7 @@ class MultiTransformerLayer(nn.Module):
         attention_score = nn.Softmax(dim=3)(attention_score)
         attention_score = self.att_drop(attention_score)
         O = torch.matmul(attention_score, V)
-        O = self.W(O.permute(0, 2, 1, 3).view(x.size(0), x.size(1), -1)) # bxnxd
+        O = self.W(O.permute(0, 2, 1, 3).contiguous().view(x.size(0), x.size(1), -1)) # bxnxd
         O = self.state_drop(O)
         O = self.lm(x + O)
         return O
@@ -147,4 +147,10 @@ class MultiTransformerLayer(nn.Module):
         x = self.SelfAttention(x, attention_mask)
         x = self.FFN(x)
         return x
+
+if __name__ == '__main__':
+    layer = MultiTransformerLayer()
+    x = torch.zeros(2, 256, 768)
+    mask = torch.ones(2, 256)
+    print(layer(x, mask))
 ```
