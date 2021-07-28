@@ -3,6 +3,33 @@
     "config_mgr": "vx.vnotex",
     "created_time": "2021-03-27T04:32:12Z",
     "description": "",
+    "history": [
+        {
+            "last_accessed_time": "2021-07-26T11:49:53Z",
+            "line_number": -1,
+            "path": "/Users/lvqingsong/Documents/vnote_notebooks/Paper/知识蒸馏.md"
+        },
+        {
+            "last_accessed_time": "2021-07-26T11:50:05Z",
+            "line_number": -1,
+            "path": "/Users/lvqingsong/Documents/vnote_notebooks/Paper/vx_recycle_bin/20210720/todo list.md"
+        },
+        {
+            "last_accessed_time": "2021-07-26T11:50:38Z",
+            "line_number": 2,
+            "path": "/Users/lvqingsong/Documents/vnote_notebooks/Paper/blogs.md"
+        },
+        {
+            "last_accessed_time": "2021-07-26T11:50:44Z",
+            "line_number": -1,
+            "path": "/Users/lvqingsong/Documents/vnote_notebooks/Paper/复数.md"
+        },
+        {
+            "last_accessed_time": "2021-07-28T15:46:02Z",
+            "line_number": 4,
+            "path": "/Users/lvqingsong/Documents/vnote_notebooks/Paper/GNN.md"
+        }
+    ],
     "image_folder": "vx_images",
     "name": "Paper",
     "next_node_id": "2",
