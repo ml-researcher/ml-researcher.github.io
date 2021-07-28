@@ -2,7 +2,7 @@
 
 这是一篇试图通过数学的逻辑推导来理解GCN的文章，虽然有一些操作确实只是empirical的，不过大部分还是可以用逻辑串起来的。
 
-这份文字版只是我做视频的大纲，如果要看完整的讲解可以移步b站视频：https://www.bilibili.com/video/BV1Vw411R7Fj
+这份文字版只是我做视频的大纲，如果要看完整的讲解可以移步[b站视频](https://www.bilibili.com/video/BV1Vw411R7Fj)。
 
 ## GCN简介
 
