@@ -3,6 +3,8 @@
     "config_mgr": "vx.vnotex",
     "created_time": "2021-03-27T04:32:12Z",
     "description": "",
+    "extra_configs": {
+    },
     "history": [
         {
             "last_accessed_time": "2021-07-26T11:49:53Z",
@@ -28,11 +30,6 @@
             "last_accessed_time": "2021-07-28T15:49:18Z",
             "line_number": 4,
             "path": "/Users/lvqingsong/Documents/vnote_notebooks/Paper/GNN.md"
-        },
-        {
-            "last_accessed_time": "2021-07-29T05:25:07Z",
-            "line_number": -1,
-            "path": "/Users/lvqingsong/Documents/vnote_notebooks/Paper/关于论文阅读的一些心得.md"
         },
         {
             "last_accessed_time": "2021-07-29T14:08:25Z",
@@ -63,11 +60,16 @@
             "last_accessed_time": "2021-08-22T14:35:26Z",
             "line_number": -1,
             "path": "/Users/lvqingsong/Documents/vnote_notebooks/Paper/Object Detection.md"
+        },
+        {
+            "last_accessed_time": "2021-12-17T02:59:40Z",
+            "line_number": -1,
+            "path": "/Users/lvqingsong/Documents/vnote_notebooks/Paper/关于论文阅读的一些心得.md"
         }
     ],
     "image_folder": "vx_images",
     "name": "Paper",
-    "next_node_id": "2",
-    "version": "1",
+    "tag_graph": "",
+    "version": 3,
     "version_controller": "dummy.vnotex"
 }
