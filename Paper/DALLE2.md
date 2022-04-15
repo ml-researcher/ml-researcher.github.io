@@ -21,5 +21,3 @@ Here is a note for CLIP:
 What is bag-of-words prediction?
 
 -----
-
-del_mixin需要把args也删掉
