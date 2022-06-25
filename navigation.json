@@ -6,6 +6,12 @@
             "target": "Paper/vx.json",
             "navi": true,
             "navi_index": "test.md"
+        },
+        {
+            "text": "Algorithm",
+            "target": "Algorithm/vx.json",
+            "navi": true,
+            "navi_index": "概述/算法笔记.md"
         }
     ],
     "actions":

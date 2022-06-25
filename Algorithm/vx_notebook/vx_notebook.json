@@ -1,0 +1,80 @@
+{
+    "attachment_folder": "_v_attachments",
+    "config_mgr": "vx.vnotex",
+    "created_time": "2019-10-26T01:22:43Z",
+    "description": "",
+    "extra_configs": {
+    },
+    "history": [
+        {
+            "last_accessed_time": "2021-07-25T10:34:40Z",
+            "line_number": 10,
+            "path": "/Users/lvqingsong/Documents/vnote_notebooks/Algorithm/数学/FFT.md"
+        },
+        {
+            "last_accessed_time": "2021-07-31T03:00:55Z",
+            "line_number": 35,
+            "path": "/Users/lvqingsong/Documents/vnote_notebooks/Algorithm/Trick/二进制思想.md"
+        },
+        {
+            "last_accessed_time": "2021-08-03T23:51:43Z",
+            "line_number": 5,
+            "path": "/Users/lvqingsong/Documents/vnote_notebooks/Algorithm/Trick/滑窗（双指针）.md"
+        },
+        {
+            "last_accessed_time": "2021-08-12T06:00:35Z",
+            "line_number": -1,
+            "path": "/Users/lvqingsong/Documents/vnote_notebooks/Algorithm/树/LCA.md"
+        },
+        {
+            "last_accessed_time": "2021-08-12T06:00:36Z",
+            "line_number": -1,
+            "path": "/Users/lvqingsong/Documents/vnote_notebooks/Algorithm/图论/有向图强连通性.md"
+        },
+        {
+            "last_accessed_time": "2021-09-12T15:47:12Z",
+            "line_number": -1,
+            "path": "/Users/lvqingsong/Documents/vnote_notebooks/Algorithm/数据结构/单调栈.md"
+        },
+        {
+            "last_accessed_time": "2021-09-12T15:47:13Z",
+            "line_number": -1,
+            "path": "/Users/lvqingsong/Documents/vnote_notebooks/Algorithm/Trick/贪心.md"
+        },
+        {
+            "last_accessed_time": "2021-09-12T15:47:13Z",
+            "line_number": -1,
+            "path": "/Users/lvqingsong/Documents/vnote_notebooks/Algorithm/Trick/二分判定.md"
+        },
+        {
+            "last_accessed_time": "2021-09-20T03:20:44Z",
+            "line_number": -1,
+            "path": "/Users/lvqingsong/Documents/vnote_notebooks/Algorithm/动态规划/常规DP.md"
+        },
+        {
+            "last_accessed_time": "2021-09-20T03:20:47Z",
+            "line_number": 0,
+            "path": "/Users/lvqingsong/Documents/vnote_notebooks/Algorithm/动态规划/待分类.md"
+        },
+        {
+            "last_accessed_time": "2021-09-20T03:20:56Z",
+            "line_number": -1,
+            "path": "/Users/lvqingsong/Documents/vnote_notebooks/Algorithm/vx_recycle_bin/20210920/待分类.md"
+        },
+        {
+            "last_accessed_time": "2021-09-20T11:55:12Z",
+            "line_number": -1,
+            "path": "/Users/lvqingsong/Documents/vnote_notebooks/Algorithm/动态规划/前向dp.md"
+        },
+        {
+            "last_accessed_time": "2021-09-20T11:55:12Z",
+            "line_number": -1,
+            "path": "/Users/lvqingsong/Documents/vnote_notebooks/Algorithm/动态规划/动态规划综述.md"
+        }
+    ],
+    "image_folder": "vx_images",
+    "name": "Algorithm",
+    "tag_graph": "",
+    "version": 3,
+    "version_controller": "dummy.vnotex"
+}
