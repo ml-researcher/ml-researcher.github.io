@@ -11,7 +11,8 @@
             "text": "Algorithm",
             "target": "Algorithm/vx.json",
             "navi": true,
-            "navi_index": "概述/算法笔记.md"
+            "navi_index": "概述/算法笔记.md",
+            "navi_expand_level": 1
         }
     ],
     "actions":
