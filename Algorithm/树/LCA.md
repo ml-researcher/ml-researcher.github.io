@@ -35,10 +35,10 @@ int lca(int u, int v)
 
 可以发现，上面的暴力算法时间复杂度主要耗费在了跳这个操作，每次只能跳一格。那么用倍增的方法，就可以做到让跳的次数到达log级别。
 
-用到一种倍增的思想，记 fastfa[i][j] 表示从$$i$$向上跳$$2^j$$步会跳到谁，这个可以在$$O(n \log n)$$的时间复杂度内预处理。
+用到一种倍增的思想，记 fastfa[i][j] 表示从$i$向上跳$2^j$步会跳到谁，这个可以在$O(n \log n)$的时间复杂度内预处理。
 
-初始化：$$fa[root]=root,\ fastfa[i][0]=fa[i]$$。
-递推式：$$fastfa[i][j]=fast[fastfa[i][j-1]][j-1]$$。
+初始化：$fa[root]=root,\ fastfa[i][0]=fa[i]$。
+递推式：$fastfa[i][j]=fastfa[fastfa[i][j-1]][j-1]$。
 
 对于上面暴力的代码，调整深度，可以用fastfa数组在log次以内向上跳dep[u]-dep[v]步；对于一起向上跳的部分，可以用fastfa数组在log次以内跳到最下面的能让它们重合的位置。代码如下：
 
