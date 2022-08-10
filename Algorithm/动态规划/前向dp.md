@@ -20,3 +20,4 @@ for (int i=1; i<=n; i++) dp[xxx] = xxx dp[i] xxx
 题目暂时就找到这一个，以后遇到再补充吧。
 
 * https://leetcode-cn.com/problems/frog-jump/
+* https://leetcode.cn/problems/number-of-people-aware-of-a-secret/
