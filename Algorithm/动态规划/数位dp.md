@@ -26,7 +26,57 @@ for (int i=L; i<=R; i++) {
 
 这个是最基础的数位DP题。
 
-[AC代码](http://lvqingsong.info/pastebin/view/a5cbdd56)
+```cpp
+#include <cstdio>
+#include <cstring>
+using namespace std;
+
+int a[10];
+int dp[10][2];
+
+int dfs(int pos, int pre_small, int pre6)
+{
+    if (pos < 0) return 1;
+    if (pre_small && dp[pos][pre6] != -1) return dp[pos][pre6]; 
+    int up = pre_small ? 9 : a[pos];
+    int ans = 0;
+    for (int i=0; i<=up; i++) {
+        if (i != 4 && !(pre6 && i == 2)) {
+            ans += dfs(pos-1, pre_small || i < a[pos], i == 6);
+        }
+    }
+    if (pre_small) dp[pos][pre6] = ans;
+    return ans;
+}
+
+int handle(int num)
+{
+    int p = 0;
+    do {
+        a[p++] = num % 10;
+        num /= 10;
+    } while (num);
+    return dfs(p-1, false, false);
+}
+
+void init()
+{
+    memset(dp, -1, sizeof(dp));
+}
+
+int main()
+{
+    while (true) {
+        int n, m;
+        scanf("%d%d", &n, &m);
+        if (n == 0 && m == 0) break;
+        init();
+        int ans = handle(m) - handle(n-1);
+        printf("%d\n", ans);
+    }
+    return 0;
+}
+```
 
 ## 例2：F(x)
 
@@ -71,3 +121,65 @@ for (int i=L; i<=R; i++) {
 ## 总结
 
 懂了以上例题，数位DP基本上就算是掌握了，关键就在于理解好这种思想的套路，然后具体问题具体分析。还是强调那种对于“状态”的感觉。
+
+参考资料：https://www.bilibili.com/video/BV1ip4y1v7zw
+
+## 例7
+
+https://leetcode.cn/problems/count-special-integers/
+
+为什么有种不知道怎么回事就过了的感觉……能写出来，但还是不得要领。
+
+
+```cpp
+#include <cstdio>
+#include <cstring>
+using namespace std;
+
+int a[10];
+int dp[10][2048][2];
+
+int dfs(int pos, int pre_small, int pre_state, int pre0)
+{
+    if (pos < 0) return 1;
+    if (pre_small && dp[pos][pre_state][pre0] != -1) return dp[pos][pre_state][pre0];
+    int up = pre_small ? 9 : a[pos];
+    int ans = 0;
+    for (int i=0; i<=up; i++) {
+        if (((pre_state>>i)&1) == 0 || pre0) {
+            int new_state = pre0 && i == 0 ? pre_state : pre_state | (1<<i);
+            ans += dfs(pos-1, pre_small || i < a[pos], new_state, pre0 && i == 0);
+        }
+    }
+    if (pre_small) dp[pos][pre_state][pre0] = ans;
+    return ans;
+}
+
+int handle(int num)
+{
+    int p = 0;
+    do {
+        a[p++] = num % 10;
+        num /= 10;
+    } while (num);
+    return dfs(p-1, false, false, true);
+}
+
+void init()
+{
+    memset(dp, -1, sizeof(dp));
+}
+
+int main()
+{
+    while (true) {
+        int n;
+        scanf("%d", &n);
+        if (n == 0) break;
+        init();
+        int ans = handle(n);
+        printf("%d\n", ans);
+    }
+    return 0;
+}
+```
