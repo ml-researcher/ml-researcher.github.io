@@ -85,6 +85,9 @@
     "folders": [
         {
             "name": "机器学习"
+        },
+        {
+            "name": "扩散模型（Diffusion Model）"
         }
     ],
     "id": "1",
