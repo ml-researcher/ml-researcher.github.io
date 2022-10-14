@@ -4,15 +4,15 @@
 
 <p style="text-align:center">https://github.com/ml-researcher/diffusion</p>
 
-这里有一个DDPM里的遗留问题需要解决：为什么$\beta_t$和$\tilde{\beta}_t$是两个特殊的$\sigma_t$的选择？
+教程里有一个DDPM里的遗留问题需要解决：为什么$\beta_t$和$\tilde{\beta}_t$是两个特殊的$\sigma_t$的选择？
 
-由贝叶斯公式：
+我们要拟合$p(x_{t-1}|x_t)$，具体来说我们想知道它的方差是多少。由贝叶斯公式：
 
 $$
 p(x_{t-1}|x_t) = \frac{p(x_t|x_{t-1})p(x_{t-1})}{p(x_t)}
 $$
 
-在这个式子里，$p(x_t|x_{t-1})=\mathcal{N}(x_t;\sqrt{1-\beta_t}x_{t-1},\beta_tI)$，分母是一个归一化常数，不好求的就是分子里的$p(x_{t-1})$。当$p(x_0)$的分布已知的时候，这个值是可以求的，这里举两个极端例子，分别是$x_0$是单点分布，以及$x_0$是标准正态分布。
+在这个式子里，$p(x_t|x_{t-1})=\mathcal{N}(x_t;\sqrt{1-\beta_t}x_{t-1},\beta_tI)$，分母是一个归一化常数，不好求的就是分子里的$p(x_{t-1})$。我们可以研究一些特殊的$x_0$的分布，求出$p(x_{t-1})$的表达式，从而求得方差，为我们选择$\sigma_t$做参考。这里举两个极端例子，分别是$x_0$是单点分布，以及$x_0$是标准正态分布。
 
 ## $x_0$服从单点分布
 
@@ -33,7 +33,7 @@ $$
 
 $$
 \begin{align*}
-p(x_{t-1}|x_t) &= \frac{p(x_t|x_{t-1})p(x_{t-1}|x_0)}{\mathcal{Z}} \\
+p(x_{t-1}|x_t) &= \frac{p(x_t|x_{t-1})p(x_{t-1})}{\mathcal{Z}} \\
 &= \frac{\exp(-\frac{(x_t-\sqrt{1-\beta_t}x_{t-1})^2}{2\beta_t})\exp(-\frac{x_{t-1}^2}{2})}{\mathcal{Z}Z'}
 \end{align*}
 $$
