@@ -88,6 +88,9 @@
         },
         {
             "name": "扩散模型（Diffusion Model）"
+        },
+        {
+            "name": "自动驾驶"
         }
     ],
     "id": "1",
