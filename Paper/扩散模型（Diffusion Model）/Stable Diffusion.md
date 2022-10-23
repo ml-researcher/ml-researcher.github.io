@@ -10,7 +10,18 @@ model会涉及到两部分：diffusion model和unet model。diffusion model是�
 
 #### unet model
 
+必要参数：
 
+```python
+image_size,
+in_channels,
+model_channels,
+out_channels,
+num_res_blocks,
+attention_resolutions,
+```
+
+attention_resolutions代表需要加attention的downsample fractor。
 
 ## MNIST示例
 
