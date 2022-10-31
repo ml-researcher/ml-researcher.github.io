@@ -45,29 +45,9 @@
             "attachment_folder": "",
             "created_time": "2022-10-19T15:42:00Z",
             "id": "23",
-            "modified_time": "2022-10-25T06:24:26Z",
+            "modified_time": "2022-10-23T14:56:17Z",
             "name": "Stable Diffusion.md",
             "signature": "207324032539336",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2022-10-26T08:47:39Z",
-            "id": "26",
-            "modified_time": "2022-10-31T03:40:30Z",
-            "name": "VAE.md",
-            "signature": "207324033119275",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2022-10-27T06:36:40Z",
-            "id": "28",
-            "modified_time": "2022-10-28T06:44:23Z",
-            "name": "DDPM.md",
-            "signature": "5546498803258500856",
             "tags": [
             ]
         }
