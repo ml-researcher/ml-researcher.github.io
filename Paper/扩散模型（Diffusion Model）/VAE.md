@@ -36,4 +36,18 @@ ELBO里最重要的一点是无中生有了一个$q(z)$出来，或者完整写�
 
 这里就必须引入ELBO的另一个推导过程：直接用等式推导，而不是用Jensen不等式推导。
 
-http://www.orchid.ac.uk/eprints/40/1/fox_vbtut.pdf
+$$
+\begin{align*}
+\log p(x) &= \int_{\mathcal{Z}} q(z)\log \frac{p(x,z)q(z)}{p(z|x)q(z)} dz \\
+&= E_{z\sim q(z)}[\log \frac{q(z)}{p(z|x)}] - E_{z\sim q(z)}[\log \frac{q(z)}{p(x,z)}] \\
+&= KL(q(z)\| p(z|x)) - KL(q(z)\| p(x,z))
+\end{align*}
+$$
+
+等式的第一项是gap，第二项就是ELBO，于是有：
+
+$$
+ELBO = \log p(x) - KL(q(z)\| p(z|x))
+$$
+
+根据这个等式，让ELBO最大的最优的$q(z)$恰好就是$p(z|x)$。这也就意味着我们期望神经网络Enc学完以后，就是可以给定x预测z的条件概率分布（后验预测）。
