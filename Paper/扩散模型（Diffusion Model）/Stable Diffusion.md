@@ -26,3 +26,5 @@ attention_resolutions代表需要加attention的downsample fractor。
 ## MNIST示例
 
 梳理一下原始pytorch的实现，对比一下stable diffusion和diffusers的实现。
+
+https://github.com/1049451037/stable-diffusion

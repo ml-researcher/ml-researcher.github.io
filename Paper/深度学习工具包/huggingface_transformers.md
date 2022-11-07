@@ -1,0 +1,1 @@
+decoder先self-attention再cross-attention。
