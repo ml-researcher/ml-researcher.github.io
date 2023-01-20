@@ -1,5 +1,9 @@
 # Stable Diffusion
 
+我觉得根本没时间研究的那么细，只能是用到什么研究什么。比如暂时，就先研究怎么inference。
+
+第一步，先把inference跑起来！
+
 ## 代码研读
 
 stable-diffusion关键就是三个模块：model、data、callback。
