@@ -8,6 +8,7 @@
 * -it：交互（是进行attach detach的必要条件）
 * -d：后台运行，通过docker logs -f container_id查看输出
 * --name：为容器命名
+* --rm：退出以后不保存在ps里
 
 ## docker ps
 
@@ -57,6 +58,10 @@ docker port cid查看端口映射
 ### 显卡共享
 
 docker run --gpus all
+
+docker run --gpus all --ipc=host --ulimit memlock=-1 --ulimit stack=67108864
+
+cuda driver需要依赖于host。但是好像不用驱动也可以运行最新版cuda的python包。
 
 ### 文件共享
 
