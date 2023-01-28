@@ -32,3 +32,17 @@ attention_resolutions代表需要加attention的downsample fractor。
 梳理一下原始pytorch的实现，对比一下stable diffusion和diffusers的实现。
 
 https://github.com/1049451037/stable-diffusion
+
+## Inference
+
+model是LatentDiffusion
+
+model.model是DiffusionWrapper，用的是c_crossattn，暂时还没理解为什么DiffusionWrapper是一个LightningModule
+
+model.model.diffusion_model是UNet，也是我需要去加速的核心位置。
+
+* 输入有三个参数：x，t和context
+* x: (bs*2, 4, 64, 64) float32
+* t: (6,) int64 tensor([981, 981, 981, 981, 981, 981], device='cuda:0')
+* context: (bs*2, 77, 768) float32
+

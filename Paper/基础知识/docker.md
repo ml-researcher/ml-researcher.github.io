@@ -51,9 +51,18 @@ docker rmi image_name
 ### 端口映射
 
 * -P：将容器的端口随机映射到主机
-* -p p_docker:p_host
+* -p p_host:p_docker
+* --net=host
 
 docker port cid查看端口映射
+
+在容器内访问主机：host.docker.internal，查看/etc/hosts
+
+host的clash config allow-lan: true
+
+docker内开启ssh需要修改/etc/ssh/sshd_config，开启PermitRootLogin yes。
+
+vscode可以直接用remote扩展连接container。
 
 ### 显卡共享
 
