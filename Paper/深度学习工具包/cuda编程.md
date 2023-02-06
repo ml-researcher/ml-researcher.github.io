@@ -7,13 +7,15 @@
 
 所以写一个cuda kernel和写一个torch算子还不是一回事。
 
+https://zhuanlan.zhihu.com/p/48463543
+
 ## cuda编程
 
 https://face2ai.com/program-blog/#GPU编程（CUDA）
 
 Professional CUDA C Programming
 
-我觉得现在应该分清主次，要深挖下去没有头，还是得high level地去学，用到再查。
+我觉得现在应该分清主次，要深挖下去没有头，还是得high level地去学，用到再查。（虽然真的很有意思，延迟隐藏还没研究明白）
 
 我现在主要的问题：
 
