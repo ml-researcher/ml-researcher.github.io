@@ -5,6 +5,8 @@
 * https://pytorch.org/tutorials/advanced/cpp_extension.html
 * https://developer.nvidia.com/blog/even-easier-introduction-cuda/
 
+所以写一个cuda kernel和写一个torch算子还不是一回事。
+
 ## cuda编程
 
 https://face2ai.com/program-blog/#GPU编程（CUDA）

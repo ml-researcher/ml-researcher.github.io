@@ -1,5 +1,16 @@
 # TensorRT
 
+## TensorRT原理
+
+计算图优化：https://blog.csdn.net/xh_hit/article/details/79769599
+
+* 消除无用计算节点
+* 垂直整合，比如conv+bn+relu
+* 水平整合，合并相同输入的相同运算
+* concat层？
+
+还可以根据平台自动选择最优kernel。
+
 ## Nvidia-TensorRT
 
 https://docs.nvidia.com/deeplearning/tensorrt/quick-start-guide/index.html#ecosystem
