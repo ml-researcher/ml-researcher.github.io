@@ -59,3 +59,6 @@ https://developer.nvidia.com/blog/accelerating-inference-up-to-6x-faster-in-pyto
 * torch._C._jit_to_backend("tensorrt")可以把ts转成trt？但是这里的trt和raw trt还是不太一样，因为它可以以torch.tensor作为输入。这里转出来的是torchscript，所以相当于torch-tensorrt提供了ts跑trt的引擎？还是说提供了trt格式和ts格式之间的转化？
 
 https://zhuanlan.zhihu.com/p/593161199
+
+## TensorRT文档
+

@@ -22,3 +22,8 @@ Professional CUDA C Programming
 * 如何把flash attention用起来
 * 如何继续优化onnx for unet
 * 如何把flash attention的onnx和tensorrt打通
+
+发现打通不了……文档和例子太少了。
+
+先把TensorRT里现有的bertQKVToContextPlugin插件用起来。
+
