@@ -31,6 +31,19 @@ https://nichijou.co/cuda1/
 
 ### 物理层
 
+一个GPU有多个SM（multithreaded streaming multiprocessors），每个SM以32个线程（warp）为单位创建、管理、调度、执行线程。线程束的执行单元是SP，一个SM可以有多个SP。
+
+warp的分配原则就是连续32个thread id被分配到同一个warp，(x, y) is (x + y Dx)，(x, y, z) is (x + y Dx + z Dx Dy)。
+
+执行架构是SIMT，尽量不要让线程束分化是写程序需要考虑的。
+
+每个block有自己需要的shared memory size，每个warp有自己的execution context（占用on-chip register）。因此每个SM可以同时容纳的block和warp是有限的。
+
+这里需要理解为什么要这样设计：
+
+* 硬件制造成本
+* 低耗电量
+* 内存访问合并：这是由DRAM的特性决定的，访问连续内存会快，因此一个线程束可以将多条访存合并为一次传输。（可以理解为同时的连续访存合并，不同时不能合并，而我们能控制的同时的就只有warp）
 
 
 ### 逻辑层
@@ -39,4 +52,9 @@ https://nichijou.co/cuda1/
 
 ### 数据搬运
 
-DRAM，SRAM
+数据搬运同样存在物理层和逻辑层，如果只考虑正确性，那就逻辑层随便写，但是如果想高效，物理层特性必须考虑进来。例如：
+
+* coalesce
+* DRAM，SRAM
+
+题外话：物理层特性考虑进来确实可以高效，但是物理层并不是一成不变的，因此下层的变化会影响上层……
