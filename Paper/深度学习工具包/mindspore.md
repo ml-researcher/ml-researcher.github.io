@@ -15,3 +15,12 @@ https://pytorch.org/docs/stable/notes/extending.html
 
 我觉得jittor是一个kernel generator！从这个角度来看的话它和Triton很像啊。
 
+主要贡献：
+
+* 元算子
+* 动态编译、实时优化、算子融合
+* 统一图运行（区别于动态图和静态图）
+
+## mindspore自动微分
+
+source transformation，感觉貌似也不是太懂……不过这样做肯定有他的道理吧，估计是为了多平台运行？还不确定。
