@@ -42,3 +42,8 @@ https://github.com/THUDM/SwissArmyTransformer
 * 研究一下huggingface的pipeline
 * 研究一下sat里现有的glm的pipeline
 * 文本生成脚本
+
+## ChatGLM-6B finetune
+
+之前一直在转换模型参数和inference，这回做finetune需要仔细研究一下怎么训练。
+
