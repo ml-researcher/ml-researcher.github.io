@@ -45,5 +45,16 @@ https://github.com/THUDM/SwissArmyTransformer
 
 ## ChatGLM-6B finetune
 
-之前一直在转换模型参数和inference，这回做finetune需要仔细研究一下怎么训练。
+### 训练集的构造
 
+根据tokenizer.convert_ids_to_tokens函数可以知道训练集的构造方法。
+
+```
+input_ids: sentence1 + [gMASK] + <sop> + sentence2 + <eop> + ...<pad>
+labels: [-100]*len(sentence1) + [-100] + input_ids_of_the_left
+```
+
+### RoPE
+
+* https://kexue.fm/archives/8265
+* https://kexue.fm/archives/8397
